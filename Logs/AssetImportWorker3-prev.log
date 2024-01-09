@@ -1,0 +1,330 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.5f1 (9674261d40ee) revision 9860134'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'en' Physical Memory: 32667 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2022.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/enzo.lahana/Downloads/Basic3D/3D in Game Engine
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+64610
+Successfully changed project path to: C:/Users/enzo.lahana/Downloads/Basic3D/3D in Game Engine
+C:/Users/enzo.lahana/Downloads/Basic3D/3D in Game Engine
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [15580] Host "[IP] 192.168.2.79 [Port] 0 [Flags] 2 [Guid] 794984975 [EditorId] 794984975 [Version] 1048832 [Id] WindowsEditor(7,md8-2017-024) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [15580] Host "[IP] 192.168.2.79 [Port] 0 [Flags] 2 [Guid] 794984975 [EditorId] 794984975 [Version] 1048832 [Id] WindowsEditor(7,md8-2017-024) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 8.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.5f1 (9674261d40ee)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2022.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/enzo.lahana/Downloads/Basic3D/3D in Game Engine/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
+    Vendor:   NVIDIA
+    VRAM:     6043 MB
+    Driver:   31.0.15.3742
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2022.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2022.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2022.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2022.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008711 seconds.
+- Loaded All Assemblies, in  0.409 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.321 seconds
+Domain Reload Profiling: 728ms
+	BeginReloadAssembly (100ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (72ms)
+	LoadAllAssembliesAndSetupDomain (173ms)
+		LoadAssemblies (97ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (167ms)
+			TypeCache.Refresh (166ms)
+				TypeCache.ScanAssembly (148ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (321ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (254ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (174ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\enzo.lahana\Downloads\Basic3D\3D in Game Engine\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\enzo.lahana\Downloads\Basic3D\3D in Game Engine\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.799 seconds
+Refreshing native plugins compatible for Editor in 2.73 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.548 seconds
+Domain Reload Profiling: 1344ms
+	BeginReloadAssembly (145ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (23ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (545ms)
+		LoadAssemblies (286ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (324ms)
+			TypeCache.Refresh (304ms)
+				TypeCache.ScanAssembly (290ms)
+			ScanForSourceGeneratedMonoScriptInfo (15ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (549ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (381ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (64ms)
+			ProcessInitializeOnLoadAttributes (276ms)
+			ProcessInitializeOnLoadMethodAttributes (24ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3091 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (59.5 KB). Loaded Objects now: 3581.
+Memory consumption went from 136.7 MB to 136.6 MB.
+Total: 4.918900 ms (FindLiveObjects: 0.242800 ms CreateObjectMapping: 0.218600 ms MarkObjects: 4.334300 ms  DeleteObjects: 0.122500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/ExposureArea.cs: 7c2057b96d8830e9af6bc289aece6e72 -> 17695df7fe02bdd7afb5af2537675c53
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/CullDistances.cs: ac6e1160e10b4ffd6e6953195720fd62 -> eaf3addacf1fdc5548b86234a8da7db4
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:scripting/monoscript/fileName/CursorLock.cs: 1fa59bf1e1bffc792a05bbbc647c7e5d -> 569b11d49e074434168a0ec696af82dc
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/TriggerArea.cs: c1f603b9ca19b5309db4febda0830528 -> 9fe34f1003642ff0525de6fa5df8cf19
+  custom:scripting/monoscript/fileName/CharController_Motor.cs: 412856da7e146faec6a9c04fcd657a7c -> 37e10bd6f8b1e0a0a4f2f0574415b72f
+  custom:scripting/monoscript/fileName/CullDistanceVolume.cs: 3d505c3731e6f54400a386ed3d850562 -> 1b03287f9ca8e0858d8aa607e18872cc
+  custom:scripting/monoscript/fileName/Door.cs: dd295a51f3324d102b82a7654c2bef59 -> 191f32848cd0aec0adce0d9c60a828dd
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/WindSwaySimple.cs: f3b88c61067911b2f36277d6779f24a6 -> 0a5b107c7d3a97cdfef3ed1193085352
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:scripting/monoscript/fileName/DisableRenderer.cs: 7baeb2f9f5254adf981a3462fc70f85f -> d6c21a1c07417891f7926dc7b4374a62
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/DistanceHide.cs: 5a4cd7e0e16c4d8fac8bbe543ff87ad5 -> af13bd0db97c10640264419b97a06344
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/CursorManager.cs: 5a184e9b7424b4b664286f5ef0049d8c -> 34a88e6dedc5a3d4c7f3fb93b6cdad8e
+  custom:scripting/monoscript/fileName/MoveToLayer.cs: dacc924fb669eb9d4c39f14a095cbe62 -> 258e7259744dad948cac6f8c71aef15c
+  custom:scripting/monoscript/fileName/CircularLerp.cs: 99db6b68c958325125177b71f1e3311d -> 41d5366c3f3f6a82fe01acfb3ea77fd2
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/ExposureManager.cs: 40a19967d8ab546d57fa5f7d9864cb85 -> 42a8e67f5ccd0a2a6d77f2a69c99c2c0
+========================================================================
+Received Import Request.
+  Time since last request: 1731661.439873 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/LightingData.asset
+  artifactKey: Guid(35d9e576972f6e142becdf3e4d3bbda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/LightingData.asset using Guid(35d9e576972f6e142becdf3e4d3bbda2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71fd7dd0299a447878c1954bbfb7275e') in 0.010819 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-11.png
+  artifactKey: Guid(6eaa34399826f5c4d85e6b2c33bf90f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-11.png using Guid(6eaa34399826f5c4d85e6b2c33bf90f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ea44abfe94da692815e66b0dd98184b') in 0.101000 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/OcclusionCullingData.asset
+  artifactKey: Guid(2ee2c5d9b75ae0f418a8ee99cdcea359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/OcclusionCullingData.asset using Guid(2ee2c5d9b75ae0f418a8ee99cdcea359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64a608246b25a8c847a752ccce61f224') in 0.058743 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-8.exr
+  artifactKey: Guid(b65671d8078bafc46a04bfe85fcde8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-8.exr using Guid(b65671d8078bafc46a04bfe85fcde8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fcc48865719bf15facd2283cdb57862') in 0.020035 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene
+  artifactKey: Guid(078ec2d6aaabd9e4ab67a01a756b1a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene using Guid(078ec2d6aaabd9e4ab67a01a756b1a5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47533a3f69868d18fee2100b465acd53') in 0.000474 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-7.png
+  artifactKey: Guid(f716c533cf92fc544ab0b9781b7f0ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-7.png using Guid(f716c533cf92fc544ab0b9781b7f0ff5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf909e2359f133bd45caf1d2c0220f1') in 0.015188 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-6.exr
+  artifactKey: Guid(73bed3aa62d9e9e40bac888baba6dab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-6.exr using Guid(73bed3aa62d9e9e40bac888baba6dab0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1928e6d7bab06a404ae37a5510626b2') in 0.014801 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-10.png
+  artifactKey: Guid(ecd791a6a8a905f449d2c763b42e2536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-10.png using Guid(ecd791a6a8a905f449d2c763b42e2536) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99c615e67c392322e761e04f9bb9a8dc') in 0.013529 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-1.png
+  artifactKey: Guid(b5e6a4d8704121045bae3a89b00c5080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-1.png using Guid(b5e6a4d8704121045bae3a89b00c5080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae60f576ea4881b2928ec2dc9b175c7') in 0.015051 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-2.png
+  artifactKey: Guid(295a36ed743187847bad4350cd148004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-2.png using Guid(295a36ed743187847bad4350cd148004) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d98ebf41ea516912d628081e3f041e') in 0.012643 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-3.png
+  artifactKey: Guid(f25db3a157a9ccd48af182bbcb0d8a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene/ReflectionProbe-3.png using Guid(f25db3a157a9ccd48af182bbcb0d8a2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e623a67a3e44110ec9ab35a92ad2875') in 0.014707 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Graphics/Sun_Temple/Scenes/DemoScene_Terrain.asset
+  artifactKey: Guid(f823c19a6b6522e419f1a976d5be48e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Graphics/Sun_Temple/Scenes/DemoScene_Terrain.asset using Guid(f823c19a6b6522e419f1a976d5be48e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) 
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+=================================================================
+Received signal SIGSEGV
+Obtained 30 stack frames
+0x00007ff7b8018fda (Unity) CreateAssetToGUIDMappingV2
+0x00007ff7b7fa529a (Unity) AssetDatabase::CreateAssetToGUIDMapping
+0x00007ff7b7499888 (Unity) SplatDatabase::CreateTerrainLayersFromDeprecatedSplats
+0x00007ff7b749793e (Unity) SplatDatabase::ConvertSplatsToTerrainLayers
+0x00007ff7b749406c (Unity) SplatDatabase::AwakeFromLoad
+0x00007ff7b74c5cf9 (Unity) TerrainData::AwakeFromLoad
+0x00007ff7b6cc4f4d (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
+0x00007ff7b6cc5f21 (Unity) AwakeFromLoadQueue::PersistentManagerSingleQueueAwakeFromLoad
+0x00007ff7b6cc5b90 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad_NoChecks
+0x00007ff7b6c9737f (Unity) PersistentManager::IntegrateAllThreadedObjects
+0x00007ff7b6c97ca0 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
+0x00007ff7b6c9c092 (Unity) PersistentManager::ReadObject
+0x00007ff7b7f962b3 (Unity) WritePreviews
+0x00007ff7b7f8d3cf (Unity) PreviewImporter::GenerateAssetData
+0x00007ff7b7fd76e5 (Unity) ImportToObjects
+0x00007ff7b7fd66cc (Unity) ImportAsset
+0x00007ff7b7ffb768 (Unity) AssetImportWorker::Import
+0x00007ff7b80635e2 (Unity) <lambda_183697078dc22ecb201e4599e9982eaf>::operator()
+0x00007ff7b809f1d2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)>,asio::io_context::basic_executor_type<std::allocator<void>,0> >::do_complete
+0x00007ff7b808b17e (Unity) asio::detail::win_iocp_io_context::do_one
+0x00007ff7b808cde4 (Unity) asio::detail::win_iocp_io_context::run
+0x00007ff7b809d57c (Unity) IOService::Run
+0x00007ff7b8071d3f (Unity) AssetImportWorkerClient::Run
+0x00007ff7b803ca27 (Unity) RunAssetImportWorkerClientV2
+0x00007ff7b803caab (Unity) RunAssetImporterV2
+0x00007ff7b78412c1 (Unity) Application::InitializeProject
+0x00007ff7b7cc6575 (Unity) WinMain
+0x00007ff7b90b133e (Unity) __scrt_common_main_seh
+0x00007ffc0a817344 (KERNEL32) BaseThreadInitThunk
+0x00007ffc0be226b1 (ntdll) RtlUserThreadStart
+
