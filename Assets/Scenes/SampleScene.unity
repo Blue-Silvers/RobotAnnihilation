@@ -755,6 +755,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _jumpStrength: 8
+  velocity: 0
 --- !u!1 &1930573885
 GameObject:
   m_ObjectHideFlags: 0

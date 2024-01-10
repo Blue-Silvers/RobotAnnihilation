@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     private bool jump = false, isGrounded = true;
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float _jumpStrength = 8f;
+    bool canFall = true;
+
+    public float velocity;
 
     private void Start()
     {
@@ -32,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
-            isRunning = true;
+            isRunning = false;
         }
         else
         {
@@ -74,11 +77,23 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", 0);
         }
 
-        //
-        if (transform.forward.y < 0)
+
+        if (rigidbody.velocity.y > 0)
+        {
+            canFall = true;
+
+        }
+        if (isGrounded)
+        {
+            canFall = false;
+        }
+
+        ////
+        if (rigidbody.velocity.y < 0 && canFall == true)
         {
             animator.SetBool("Fall", true);
         }
+        velocity = rigidbody.velocity.y;
     }
 
     private void OnCollisionEnter(Collision collision)
