@@ -1,6 +1,8 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -21,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float _jumpStrength = 8f;
     bool canFall = true;
+    [SerializeField] Camera cam;
+    [SerializeField] int fovValue;
 
     public float velocity;
 
@@ -35,7 +39,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;
-            isRunning = false;
+            isRunning = true;
+            
         }
         else
         {
@@ -71,10 +76,19 @@ public class PlayerMovement : MonoBehaviour
         if (input.sqrMagnitude != 0)
         {
             animator.SetFloat("Speed", speed);
+            if (isRunning == true)
+            {
+                cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, fovValue + 10, 0.5f);
+            }
+            else
+            {
+                cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, fovValue + 5, 0.5f);
+            }
         }
         else
         {
             animator.SetFloat("Speed", 0);
+            cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, fovValue, 0.5f);
         }
 
 
@@ -88,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
             canFall = false;
         }
 
-        ////
+
         if (rigidbody.velocity.y < 0 && canFall == true)
         {
             animator.SetBool("Fall", true);
