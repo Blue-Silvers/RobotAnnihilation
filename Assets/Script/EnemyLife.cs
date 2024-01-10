@@ -8,6 +8,7 @@ public class EnemyLife : MonoBehaviour
     [SerializeField] private int actualLife;
     MeshRenderer meshRenderer;
     bool hit = false;
+    bool canHit = true;
 
     private void Start()
     {
@@ -17,13 +18,13 @@ public class EnemyLife : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Sword"))
+        if (other.CompareTag("Sword") && canHit == true)
         {
             actualLife--;
             meshRenderer.material.SetColor("_Color", Color.red);
             hit = true;
+            canHit = false;
             Invoke("blueTic", 0.2f);
-            
         }
     }
     private void Update()
@@ -41,6 +42,10 @@ public class EnemyLife : MonoBehaviour
         {
             hit = false;
             Invoke("redTic", 0.2f);
+        }
+        else
+        {
+            canHit = true;
         }
     }
 
