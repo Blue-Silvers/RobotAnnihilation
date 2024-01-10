@@ -78,11 +78,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", speed);
             if (isRunning == true)
             {
-                cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, fovValue + fovValue * 14/100, 0.5f);
+                cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, fovValue + fovValue * 20/100, 0.5f);
             }
             else
             {
-                cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, fovValue + fovValue * 7 / 100, 0.5f);
+                cam.fieldOfView = Mathf.MoveTowards(cam.fieldOfView, fovValue + fovValue * 10 / 100, 0.5f);
             }
         }
         else
