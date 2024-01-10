@@ -1055,7 +1055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3391052950530971968, guid: 42cb451cfcac1a147ac13c9dc2577f9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 78.49051
+      value: 77.55
       objectReference: {fileID: 0}
     - target: {fileID: 3391052950530971968, guid: 42cb451cfcac1a147ac13c9dc2577f9e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1092,6 +1092,10 @@ PrefabInstance:
     - target: {fileID: 8854934568369520591, guid: 42cb451cfcac1a147ac13c9dc2577f9e, type: 3}
       propertyPath: m_Name
       value: Rock1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854934568369520591, guid: 42cb451cfcac1a147ac13c9dc2577f9e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
