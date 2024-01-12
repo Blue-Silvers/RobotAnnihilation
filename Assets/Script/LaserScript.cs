@@ -16,6 +16,8 @@ public class LaserScript : MonoBehaviour
     [SerializeField] private float maxLaserTime;
     [SerializeField] private float laserTime;
     private float actualLaserTime;
+    bool matainShoot = false;
+    [SerializeField] private float shootTiming;
 
 
     [SerializeField] private ParticleSystem startParticle;
@@ -44,7 +46,7 @@ public class LaserScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Mouse1))
         {
             actualLaserTime = maxLaserTime;
-
+            matainShoot = true;
             line.enabled = true;
             startParticle.Play();
             endParticle.Play();
@@ -52,6 +54,7 @@ public class LaserScript : MonoBehaviour
         else if(Input.GetKeyUp(KeyCode.Mouse1)) 
         { 
             line.enabled = false;
+            matainShoot = false;
             startParticle.Stop();
             endParticle.Stop();
             line.SetPosition(0, laserSpawnPoint.position);
@@ -61,7 +64,7 @@ public class LaserScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (line.enabled)
+        if (matainShoot == true)
         {
             if (actualCharge <= 0)
             {
@@ -71,16 +74,19 @@ public class LaserScript : MonoBehaviour
             else
             {
                 actualCharge -= surcharge;
+
+                if (actualLaserTime <= 0)
+                {
+                    Surcharge();
+                    Invoke("ShootAgain", shootTiming);
+                }
+                else
+                {
+                 actualLaserTime -= laserTime;
+                }
             }
 
-            if (actualLaserTime <= 0)
-            {
-                Surcharge();
-            }
-            else
-            {
-                actualLaserTime -= laserTime;
-            }
+
         }
         else 
         { 
@@ -135,6 +141,17 @@ public class LaserScript : MonoBehaviour
         if(actualCharge > maxCharge)
         {
             actualCharge = maxCharge;
+        }
+    }
+
+    private void ShootAgain()
+    {
+        if(matainShoot == true)
+        {
+            actualLaserTime = maxLaserTime;
+            line.enabled = true;
+            startParticle.Play();
+            endParticle.Play();
         }
     }
 }
