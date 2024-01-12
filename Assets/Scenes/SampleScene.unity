@@ -177,6 +177,12 @@ MonoBehaviour:
   surcharge: 0.1
   startParticle: {fileID: 1106124910}
   endParticle: {fileID: 664370449}
+  upgrade1: 0
+  damageUp1: 10
+  upgrade2: 0
+  damageUp2: 20
+  upgrade3: 0
+  damageUp3: 30
 --- !u!120 &87366537
 LineRenderer:
   serializedVersion: 2
@@ -472,6 +478,12 @@ MonoBehaviour:
   surcharge: 0.1
   startParticle: {fileID: 1046195653}
   endParticle: {fileID: 1591625567}
+  upgrade1: 0
+  damageUp1: 0
+  upgrade2: 0
+  damageUp2: 0
+  upgrade3: 0
+  damageUp3: 0
 --- !u!120 &640379908
 LineRenderer:
   serializedVersion: 2

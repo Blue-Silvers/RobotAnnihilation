@@ -11,8 +11,11 @@ public class LaserScript : MonoBehaviour
 
     [SerializeField] private float damagePerTick;
     [SerializeField] private float maxCharge;
-    [SerializeField] private float actualCharge;
+    private float actualCharge;
     [SerializeField] private float surcharge;
+    [SerializeField] private float maxLaserTime;
+    [SerializeField] private float laserTime;
+    private float actualLaserTime;
 
 
     [SerializeField] private ParticleSystem startParticle;
@@ -40,7 +43,7 @@ public class LaserScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Mouse1))
         {
-
+            actualLaserTime = maxLaserTime;
 
             line.enabled = true;
             startParticle.Play();
@@ -62,11 +65,21 @@ public class LaserScript : MonoBehaviour
         {
             if (actualCharge <= 0)
             {
+                actualCharge = 0;
                 Surcharge();
             }
             else
             {
                 actualCharge -= surcharge;
+            }
+
+            if (actualLaserTime <= 0)
+            {
+                Surcharge();
+            }
+            else
+            {
+                actualLaserTime -= laserTime;
             }
         }
         else 
@@ -108,7 +121,6 @@ public class LaserScript : MonoBehaviour
     private void Surcharge()
     {
         line.enabled = false;
-        actualCharge = 0;
         startParticle.Stop();
         endParticle.Stop();
         line.SetPosition(0, laserSpawnPoint.position);
