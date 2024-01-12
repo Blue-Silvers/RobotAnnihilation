@@ -17,6 +17,13 @@ public class LaserScript : MonoBehaviour
 
     [SerializeField] private ParticleSystem startParticle;
     [SerializeField] private ParticleSystem endParticle;
+
+    [SerializeField] private bool upgrade1 = false;
+    [SerializeField] private float damageUp1;
+    [SerializeField] private bool upgrade2 = false;
+    [SerializeField] private float damageUp2;
+    [SerializeField] private bool upgrade3 = false;
+    [SerializeField] private float damageUp3;
     private void Start()
     {
         line = GetComponent<LineRenderer>();
@@ -77,6 +84,24 @@ public class LaserScript : MonoBehaviour
         if(line.enabled == true && cast && hit.collider.TryGetComponent(out EnviroDestroy enviroDestroy))
         {
             enviroDestroy.LaserDamage(damagePerTick);
+        }
+
+
+        if(upgrade3 == true)
+        {
+            damagePerTick = damageUp3;
+        }
+        else if (upgrade2 == true)
+        {
+            damagePerTick = damageUp2;
+        }
+        else if (upgrade1 == true)
+        {
+            damagePerTick = damageUp1;
+        }
+        else 
+        {
+            return;
         }
     }
 
