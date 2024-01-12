@@ -97,8 +97,11 @@ public class LaserScript : MonoBehaviour
         bool cast = Physics.Raycast(ray, out RaycastHit hit, maxLenght);
         Vector3 hitPosition = cast ? hit.point : laserSpawnPoint.position + laserSpawnPoint.forward * maxLenght;
         line.SetPosition(0, laserSpawnPoint.position);
-        line.SetPosition(1, hitPosition);
+        line.SetPosition(1, hitPosition);  
+
+
         endParticle.transform.position = hitPosition;
+
 
         if(line.enabled == true && cast && hit.collider.TryGetComponent(out EnviroDestroy enviroDestroy))
         {
