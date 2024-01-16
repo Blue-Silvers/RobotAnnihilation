@@ -29,6 +29,7 @@ public class LaserScript : MonoBehaviour
     [SerializeField] private float damageUp2;
     [SerializeField] private bool upgrade3 = false;
     [SerializeField] private float damageUp3;
+
     private void Start()
     {
         line = GetComponent<LineRenderer>();
@@ -43,15 +44,15 @@ public class LaserScript : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-            actualLaserTime = maxLaserTime;
+            actualLaserTime = -10;
             matainShoot = true;
             line.enabled = true;
             startParticle.Play();
             endParticle.Play();
         }
-        else if(Input.GetKeyUp(KeyCode.Mouse1)) 
+        else if(Input.GetKeyUp(KeyCode.Mouse0)) 
         { 
             line.enabled = false;
             matainShoot = false;
@@ -75,7 +76,12 @@ public class LaserScript : MonoBehaviour
             {
                 actualCharge -= surcharge;
 
-                if (actualLaserTime <= 0)
+                if (actualLaserTime == -10)
+                {
+                    Surcharge();
+                    Invoke("ShootAgain", 0.1f);
+                }
+                else if (actualLaserTime <= 0)
                 {
                     Surcharge();
                     Invoke("ShootAgain", shootTiming);
