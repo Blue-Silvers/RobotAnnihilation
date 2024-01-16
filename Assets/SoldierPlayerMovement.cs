@@ -77,7 +77,7 @@ public class SoldierPlayerMovement : MonoBehaviour
     {
         if (jump)
         {
-            rigidbody.AddForce(Vector2.up * _jumpStrength, ForceMode.Impulse);
+            //rigidbody.AddForce(Vector2.up * _jumpStrength, ForceMode.Impulse);
             jump = false;
         }
 
