@@ -23,7 +23,7 @@ public class PickUpBox : MonoBehaviour
     [SerializeField] float batteryCharge;
 
     [SerializeField] HealthBar healthBar;
-    [SerializeField] GameObject Shop;
+    [SerializeField] GameObject Shop, deathScreen;
 
     bool gameIsPaused;
     int nbUpgrade = 1;
@@ -60,6 +60,7 @@ public class PickUpBox : MonoBehaviour
             if (actualLife <= 0)
             {
                 animator.SetBool("Dead", true);
+                Invoke("Death", 2f);
             }
         }
     }
@@ -149,5 +150,10 @@ public class PickUpBox : MonoBehaviour
 
             laserScript.Reload(batteryCharge);
         }
+    }
+
+    void Death()
+    {
+        deathScreen.SetActive(true);
     }
 }
