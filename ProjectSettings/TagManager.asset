@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Sword
   - Battery
+  - Money
+  - Heal
+  - Ammo
   layers:
   - Default
   - TransparentFX
