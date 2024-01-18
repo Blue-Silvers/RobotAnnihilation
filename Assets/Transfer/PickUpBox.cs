@@ -117,11 +117,14 @@ public class PickUpBox : MonoBehaviour
         if (money >= upgradePrice)
         {
             nbUpgrade += 1;
-            money = upgradePrice;
+            money -= upgradePrice;
+            MoneyTxt.text = money.ToString();
+
             if (nbUpgrade > 3)
             {
                 upgradeButton.SetActive(false);
             }
+
             laserScript.Upgrade();
             nbUpgradeTxt.text = nbUpgrade.ToString();
         }
@@ -133,6 +136,7 @@ public class PickUpBox : MonoBehaviour
             money -= healPrice;
 
             actualLife += heal;
+            MoneyTxt.text = money.ToString();
 
             if (actualLife > maxLife)
             {
@@ -147,6 +151,8 @@ public class PickUpBox : MonoBehaviour
         if (money >= ammoPrice)
         {
             money -= ammoPrice;
+
+            MoneyTxt.text = money.ToString();
 
             laserScript.Reload(batteryCharge);
         }
