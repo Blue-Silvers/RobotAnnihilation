@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.EditorTools;
 using UnityEngine;
 
 public class PickUpBox : MonoBehaviour
@@ -14,13 +16,39 @@ public class PickUpBox : MonoBehaviour
     [SerializeField] float heal;
     [SerializeField] int enemyDamage;
     [SerializeField] int money;
+    [SerializeField] int upgradePrice;
+    [SerializeField] int healPrice;
+    [SerializeField] int ammoPrice;
+    [SerializeField] TextMeshProUGUI MoneyTxt;
     [SerializeField] float batteryCharge;
+
+    [SerializeField] HealthBar healthBar;
+    [SerializeField] GameObject Shop;
+
+    bool gameIsPaused;
+    int nbUpgrade = 1;
+    [SerializeField] TextMeshProUGUI nbUpgradeTxt;
+    [SerializeField] GameObject upgradeButton;
+
 
     private void Start()
     {
         money = 0;
+        MoneyTxt.text = money.ToString();
         actualLife = maxLife;
+        healthBar.SetMaxHealth(maxLife);
         animator = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+            {
+                Resume();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,10 +83,13 @@ public class PickUpBox : MonoBehaviour
                 {
                     actualLife = maxLife;
                 }
+
+                healthBar.SetHealth(actualLife);
             }
             else
             {
                 money += 1;
+                MoneyTxt.text = money.ToString();
             }
 
             Destroy(other.gameObject);
@@ -66,8 +97,57 @@ public class PickUpBox : MonoBehaviour
         else if (Input.GetKey(KeyCode.E) && other.gameObject.tag == "Upgrade")
         {
             animator.SetTrigger("Use");
-            //arrêter le temps
-            //afficher ATH
+            Time.timeScale = 0f;
+            Shop.SetActive(true);
+        }
+    }
+
+
+    //Shop
+    public void Resume()
+    {
+        Shop.SetActive(false);
+        Time.timeScale = 1.0f;
+        gameIsPaused = false;
+    }
+
+    public void BuyUpgrade()
+    {
+        if (money >= upgradePrice)
+        {
+            nbUpgrade += 1;
+            money = upgradePrice;
+            if (nbUpgrade > 3)
+            {
+                upgradeButton.SetActive(false);
+            }
+            laserScript.Upgrade();
+            nbUpgradeTxt.text = nbUpgrade.ToString();
+        }
+    }
+    public void BuyHeal()
+    {
+        if (money >= healPrice)
+        {
+            money -= healPrice;
+
+            actualLife += heal;
+
+            if (actualLife > maxLife)
+            {
+                actualLife = maxLife;
+            }
+
+            healthBar.SetHealth(actualLife);
+        }
+    }
+    public void BuyAmmo()
+    {
+        if (money >= ammoPrice)
+        {
+            money -= ammoPrice;
+
+            laserScript.Reload(batteryCharge);
         }
     }
 }

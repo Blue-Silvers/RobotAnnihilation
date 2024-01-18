@@ -20,6 +20,9 @@ public class LaserScript : MonoBehaviour
     [SerializeField] private float shootTiming;
 
 
+    [SerializeField] HealthBar ammoBar;
+
+
     [SerializeField] private ParticleSystem startParticle;
     [SerializeField] private ParticleSystem endParticle;
 
@@ -32,6 +35,8 @@ public class LaserScript : MonoBehaviour
 
     private void Start()
     {
+        ammoBar.SetMaxHealth(maxCharge);
+
         line = GetComponent<LineRenderer>();
         laserSpawnPoint = GetComponent<Transform>();
         line.enabled = false;
@@ -70,11 +75,14 @@ public class LaserScript : MonoBehaviour
             if (actualCharge <= 0)
             {
                 actualCharge = 0;
+                ammoBar.SetHealth(actualCharge);
                 Surcharge();
             }
             else
             {
                 actualCharge -= surcharge;
+
+                ammoBar.SetHealth(actualCharge);
 
                 if (actualLaserTime == -10)
                 {
@@ -90,6 +98,7 @@ public class LaserScript : MonoBehaviour
                 {
                  actualLaserTime -= laserTime;
                 }
+                
             }
 
 
@@ -151,6 +160,8 @@ public class LaserScript : MonoBehaviour
         {
             actualCharge = maxCharge;
         }
+
+        ammoBar.SetHealth(actualCharge);
     }
 
     private void ShootAgain()
@@ -161,6 +172,22 @@ public class LaserScript : MonoBehaviour
             line.enabled = true;
             startParticle.Play();
             endParticle.Play();
+        }
+    }
+
+    public void Upgrade()
+    {
+        if (upgrade2 == true)
+        { 
+            upgrade3 = true; 
+        }
+        else if (upgrade1 == true)
+        {
+            upgrade2 = true;
+        }
+        else if (upgrade1 != true)
+        {
+            upgrade1 = true;
         }
     }
 }
