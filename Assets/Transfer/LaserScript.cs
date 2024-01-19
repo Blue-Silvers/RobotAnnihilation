@@ -118,13 +118,18 @@ public class LaserScript : MonoBehaviour
         endParticle.transform.position = hitPosition;
 
 
-        if(line.enabled == true && cast && hit.collider.TryGetComponent(out EnviroDestroy enviroDestroy))
+        if(line.enabled == true && cast && hit.collider.TryGetComponent(out EnemyScript enemyScript))
         {
-            enviroDestroy.LaserDamage(damagePerTick);
+            enemyScript.LaserDamage(damagePerTick);
+        }
+        
+        if (line.enabled == true && cast && hit.collider.TryGetComponent(out EniroDestruction eniroDestruction))
+        {
+            eniroDestruction.LaserDamage(damagePerTick);
         }
 
 
-        if(upgrade3 == true)
+        if (upgrade3 == true)
         {
             damagePerTick = damageUp3;
         }

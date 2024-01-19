@@ -28,7 +28,7 @@ public class PickUpBox : MonoBehaviour
     bool gameIsPaused;
     int nbUpgrade = 1;
     [SerializeField] TextMeshProUGUI nbUpgradeTxt;
-    [SerializeField] GameObject upgradeButton;
+    [SerializeField] GameObject upgradeButton, interactButton;
 
 
     private void Start()
@@ -69,7 +69,6 @@ public class PickUpBox : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && (other.gameObject.tag == "Ammo" || other.gameObject.tag == "Heal" || other.gameObject.tag == "Money"))
         {
-
             animator.SetTrigger("Pickup");
 
             if (other.gameObject.tag == "Ammo")
@@ -94,6 +93,7 @@ public class PickUpBox : MonoBehaviour
             }
 
             Destroy(other.gameObject);
+            Invoke("DontShowInteract", 0.1f);
         }
         else if (Input.GetKey(KeyCode.E) && other.gameObject.tag == "Upgrade")
         {
@@ -101,8 +101,25 @@ public class PickUpBox : MonoBehaviour
             Time.timeScale = 0f;
             Shop.SetActive(true);
         }
+
+        if (other.gameObject.tag == "Ammo" || other.gameObject.tag == "Heal" || other.gameObject.tag == "Money" || other.gameObject.tag == "Upgrade")
+        {
+            interactButton.SetActive(true);
+        }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ammo" || other.gameObject.tag == "Heal" || other.gameObject.tag == "Money" || other.gameObject.tag == "Upgrade")
+        {
+            interactButton.SetActive(false);
+        }
+    }
+
+    void DontShowInteract()
+    {
+        interactButton.SetActive(false);
+    }
 
     //Shop
     public void Resume()
