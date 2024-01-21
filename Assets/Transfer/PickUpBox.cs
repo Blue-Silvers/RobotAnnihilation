@@ -30,7 +30,7 @@ public class PickUpBox : MonoBehaviour
     [SerializeField] TextMeshProUGUI nbUpgradeTxt;
     [SerializeField] GameObject upgradeButton, interactButton;
 
-
+    int RdEscape;
     private void Start()
     {
         money = 0;
@@ -55,13 +55,18 @@ public class PickUpBox : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            actualLife -= enemyDamage;
-
-            if (actualLife <= 0)
+            RdEscape = Random.Range(1, 10);
+            if (RdEscape != 1)
             {
-                animator.SetBool("Dead", true);
-                Invoke("Death", 2f);
+                actualLife -= enemyDamage;
+
+                if (actualLife <= 0)
+                {
+                    animator.SetBool("Dead", true);
+                    Invoke("Death", 2f);
+                }
             }
+
         }
     }
 
