@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4383989690918111979}
   - component: {fileID: 4045215664807157749}
   - component: {fileID: 1713968599078405489}
+  - component: {fileID: 6801153503767992045}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Bullet
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 180}
 --- !u!33 &8361469226262423813
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -120,3 +121,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc26e11d7cb55445a5883daaba01c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &6801153503767992045
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084680785322231893}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

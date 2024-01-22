@@ -59,7 +59,7 @@ public class PickUpBox : MonoBehaviour
             if (RdEscape != 1)
             {
                 actualLife -= enemyDamage;
-
+                healthBar.SetHealth(actualLife);
                 if (actualLife <= 0)
                 {
                     animator.SetBool("Dead", true);

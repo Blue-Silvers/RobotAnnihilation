@@ -40,7 +40,7 @@ public class EnemyScript : MonoBehaviour
         bool view = Physics.Raycast(ray, out RaycastHit show, maxLenghtView);
 
 
-        if ((view && show.collider.tag == "Player") || fight)
+        if (fight)
         {
             if (cast && hit.collider.tag == "Player")
             {
@@ -66,7 +66,12 @@ public class EnemyScript : MonoBehaviour
                 animator.SetBool("View", false);
                 animator.SetBool("Walk", true);
                 agent.SetDestination(playerPos.position);
+                fight = true;
             }
+        }
+        else if (view && show.collider.tag == "Player")
+        {
+            fight = true;
         }
         else
         {
