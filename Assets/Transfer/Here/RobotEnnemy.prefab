@@ -1489,6 +1489,7 @@ GameObject:
   - component: {fileID: 7523494820204640388}
   - component: {fileID: 7156480169110027502}
   - component: {fileID: 7061158838834628193}
+  - component: {fileID: 6694047442159801291}
   m_Layer: 0
   m_Name: RobotEnnemy
   m_TagString: Untagged
@@ -1605,11 +1606,33 @@ MonoBehaviour:
   maxLenght: 20
   maxLenghtView: 50
   playerPos: {fileID: 0}
-  agent: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  explosionParticle: {fileID: 0}
+  agent: {fileID: 6694047442159801291}
+  bulletPrefab: {fileID: 3084680785322231893, guid: c421d9e375daaa84090d1650a183dbe0, type: 3}
+  explosionParticle: {fileID: 100006, guid: e4704660d196fac40802911e12ac76f1, type: 3}
   bulletSpeed: 10
   nbMaxAmmo: 5
+--- !u!195 &6694047442159801291
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5506335670673535062}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5568027172830277249
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ TagManager:
   - Money
   - Heal
   - Ammo
+  - FxTemporaire
+  - Bullet
+  - bullet
   layers:
   - Default
   - TransparentFX
