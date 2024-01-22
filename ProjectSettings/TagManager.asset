@@ -11,7 +11,7 @@ TagManager:
   - Ammo
   - FxTemporaire
   - Bullet
-  - bullet
+  - Upgrade
   layers:
   - Default
   - TransparentFX

@@ -92,7 +92,7 @@ public class PickUpBox : MonoBehaviour
             }
             else
             {
-                money += 1;
+                money += 10;
                 MoneyTxt.text = money.ToString();
             }
 
